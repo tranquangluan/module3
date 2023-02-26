@@ -22,7 +22,7 @@ order by booking_numbers asc;
 
 -- 5
 
-select customer_id, customer_name, customer_type_name, contract_id, service_name, contract_start_date, contract_end_date ;
+select customer_id, customer_name, customer_type_name, contract_id, service_name, contract_start_date, contract_end_date;
 
 -- 6. Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch vụ chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
 select service_id, service_name, service_area, service_cost , service_type_name
@@ -114,16 +114,59 @@ having count(attach_service_id) = 1;
 
 
 -- 15
+select epl.employee_id, employee_name, edctdg.educatione_degree_name, division_name, employee_phone, employee_address, count(contract_id) as create_contract_number
+from employee epl
+join contract ct on epl.employee_id = ct.employee_id
+join education_degree edctdg on epl.education_degree_id = edctdg.educatione_degree_id
+join division dvs on epl.division_id = dvs.division_id
+where ct.contract_start_date between '2020-01-01' and '2021-12-31'
+group by epl.employee_id, employee_name, edctdg.educatione_degree_name, division_name, employee_phone, employee_address
+having create_contract_number <=3;
 
 -- 16
 
+delete from employee epl where not exists 
+(select ct.employee_id
+from contract ct
+where epl.employee_id = ct.employee_id and ct.contract_start_date between '2019-01-01' and '2021-12-31');
 -- 17
+update customer, (select ct.customer_id, sum(ct.contract_total_money) as total_money
+from customer_type ctmt
+join customer ctm on ctmt.customer_type_id = ctm.customer_type_id
+join contract ct on ctm.customer_id = ct.customer_id
+where year(contract_start_date)= 2021
+group by ct.customer_id
+having total_money >= 10000000) as temp
+set customer.customer_type_id = (select customer_type_id from customer_type where customer_type_name = 'Diamond')
+where customer.customer_type_id = (select customer_type_id from customer_type where customer_type_name = 'Platinium')
+and customer.customer_id = temp.customer_id;
 
 -- 18
-
+select ctm.customer_id from customer ctm
+inner join contract ct on ctm.customer_id = ct.customer_id
+inner join contract_detail ctdt on ct.contract_id = ctdt.contract_id;
+delete from customer
+where not exists (select contract.contract_id where year(contract.contract_start_date)>'2021' and customer.customer_id = contract.customer_id);
 -- 19
+update attach_service,
+(select attach_service.attach_service_name , count(contract_detail.attach_service_id) 
+from attach_service join contract_detail on contract_detail.attach_service_id = attach_service.attach_service_id
+group by attach_service_name
+having count(contract_detail.attach_service_id)>=10) as temp
+set attach_service_cost = attach_service_cost*2
+where attach_service.attach_service_name = temp.attach_service_name;
 
--- 20
+-- 20 
+
+
+select employee_id, employee_name, employee_email, employee_phone, employee_birthday, employee_address, 'employee' as FromTable
+from employee
+union all
+select customer_id, customer_name, customer_email,customer_phone, customer_birthday, customer_address, 'customer' as FromTable
+from customer
+
+
+
 
 
 

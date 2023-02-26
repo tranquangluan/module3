@@ -22,7 +22,15 @@ order by booking_numbers asc;
 
 -- 5
 
-select customer_id, customer_name, customer_type_name, contract_id, service_name, contract_start_date, contract_end_date;
+select ctm.customer_id, customer_name, customer_type_name, ct.contract_id, service_name, contract_start_date, contract_end_date, service_name, sum(service_cost + quantity * attach_service_cost) as total_cost
+from customer ctm
+left join customer_type ctmt on ctm.customer_type_id = ctmt.customer_type_id
+left join contract ct on ctm.customer_id = ct.customer_id
+left join service sv on ct.service_id = sv.service_id
+left join contract_detail ctdt on ct.contract_id = ctdt.contract_id
+left join attach_service atsv on ctdt.attach_service_id = atsv.attach_service_id
+group by ctm.customer_id, customer_name, customer_type_name, ct.contract_id, service_name, contract_start_date, contract_end_date, service_name
+;
 
 -- 6. Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch vụ chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
 select service_id, service_name, service_area, service_cost , service_type_name

@@ -1,0 +1,69 @@
+header{
+    background-color: black;
+}
+
+body{
+    font-family: Arial;
+}
+div{
+    height: 400px;
+}
+#login{
+    float: right;
+}
+.link{
+    color: blue;
+    list-style: none;
+    text-align: center;
+    padding-right: 40px;
+}
+.li{
+    display: inline;
+    color: gray;
+}
+
+.text{
+    padding-left: 20px;
+}
+.left{
+    text-align: center;
+    width: 16.66%;
+    float: left;
+    background-color: silver;
+    height: 400px;
+}
+.content{
+    min-width: 30px;
+    width: 66.67%;
+    float: left;
+    height: 400px;
+}
+.right{
+    text-align: center;
+    width: 16.66%;
+    float: left;
+    background-color: silver;
+    height: 400px;
+}
+.ads{
+    padding-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 147px;
+    background-color: gray;
+}
+h4{
+    height:0px;
+}
+
+#div1{
+
+}
+footer{
+    background-color: dimgray;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+

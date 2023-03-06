@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+        .text{
+            padding: 15px;
+            text-align: center;
+        }
+        .div{
+            float: left;
+            width: 24.99999%;
+            border: solid 1px;
+        }
+        @media only screen and (max-width: 700px) {
+            #div1, #div2,#div3, #div4 {
+                width: 50%;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            #div1, #div2, #div3, #div4 {
+                width: 100%;
+            }
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+    <div class="div" id="div1">
+        <div>
+            <a target="_blank" href="https://bantranh.com/wp-content/uploads/2019/04/tranh-bon-mua-dep.jpg"><img src="i1.png" height="175" width="230"/></a>
+            <div class="text">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="div" id="div2">
+        <div>
+            <a target="_blank" href="https://bantranh.com/wp-content/uploads/2019/04/tranh-bon-mua-dep.jpg"><img src="i2.png" height="175" width="230"/></a>
+            <div class="text">Add a description of the image here</div>
+        </div>
+
+    </div>
+
+    <div class="div" id="div3">
+        <div>
+            <a target="_blank" href="https://bantranh.com/wp-content/uploads/2019/04/tranh-bon-mua-dep.jpg"><img src="i3.png" height="175" width="230"/></a>
+            <div class="text">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="div" id="div4">
+        <div>
+            <a target="_blank" href="https://bantranh.com/wp-content/uploads/2019/04/tranh-bon-mua-dep.jpg"><img src="i4.png" height="175" width="230"/></a>
+            <div class="text">Add a description of the image here</div>
+        </div>
+    </div>
+
+
+
+
+
+<div style="margin-top: 450px">
+    <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
 </body>
 </html>

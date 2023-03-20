@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f93ca4a-e9ff-4fd6-ad5a-8a2934dd1236" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/artifacts/unnamed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07_design_layout_wedside/exercise/b4/cartoon_wed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07_design_layout_wedside/exercise/b4/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss09_wed_overview/.idea/ss09_wed_overview.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss09_wed_overview/exercise/product_discount_calculator/src/main/java/com/example/product_discount_calculator/displayDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/Calculator_application/src/main/java/com/example/calculator_application/model/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/Calculator_application/src/main/java/com/example/calculator_application/servlet/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/Calculator_application/src/main/webapp/view/calculate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2NGoOZDaVMJeRSNuiYnqBICM6g3" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/module 3/ss11_mvc",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codegym\module 3\ss10_jsp_jstl\exercise" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f93ca4a-e9ff-4fd6-ad5a-8a2934dd1236" name="Changes" comment="" />
+      <created>1679299749032</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679299749032</updated>
+      <workItem from="1679299750376" duration="197000" />
+      <workItem from="1679309741978" duration="17000" />
+      <workItem from="1679309774337" duration="64000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

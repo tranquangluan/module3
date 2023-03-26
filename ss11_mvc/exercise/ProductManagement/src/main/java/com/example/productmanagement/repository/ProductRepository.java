@@ -10,6 +10,7 @@ public interface ProductRepository {
     void update(Product product);
     List<Product> findAll();
     Product findByName(String name);
+    Product findById(String id);
 
 
 }

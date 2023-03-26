@@ -15,15 +15,6 @@
 </head>
 <body>
     <h1>Display Product</h1>
-
-    <a href="/product?action=create"><input type="button"  value="Create"></a>
-
-    <form action="/product" method="get">
-        <input type="text" name="name">
-        <input type="submit" value="find">
-        <input type="hidden" name="action" value="findByName">
-    </form>
-    <td><a href="/product?action=delete&id=${p.id}"><input type="button"  value="Delete"></a></td>
 <table>
     <tr>
         <th>ID</th>
@@ -31,25 +22,23 @@
         <th>Price</th>
         <th>Description</th>
         <th>Manufacturer</th>
+        <th>Create</th>
         <th>Update</th>
         <th>Delete</th>
-        <th>Detail</th>
     </tr>
+    <c:forEach  var="p" items="productMap">
 
 
-    <c:forEach  var="p" items="${products}">
     <tr>
         <td>${p.id}</td>
         <td>${p.name}</td>
         <td>${p.price}</td>
         <td>${p.description}</td>
         <td>${p.manufacturer}</td>
-        <td><a href="/product?action=update&id=${p.id}"><input type="button"  value="Update"></a></td>
-        <td><a href="/product?action=delete&id=${p.id}"><input type="button"  value="Delete"></a></td>
-        <td><a href="/product?action=detail&id=${p.id}"><input type="button"  value="Detail"></a></td>
+        <td><a href="/product?action=create">Create</a></td>
+        <td><a href="/product?action=update&id=${s.id}">Update</a></td>
+        <td><a href="/product?action=delete&id=${s.id}">Delete</a></td>
     </tr>
-
-
     </c:forEach>
 </table>
 </body>
